@@ -7,14 +7,14 @@
 int Allreduce(void* sendbuf, void* recvbuf, int count, MPI_Datatype datatype,
   MPI_Op op, MPI_Comm comm) {
   if ((sendbuf == nullptr) || (recvbuf == nullptr))
-	throw std::runtime_error("Send or receive null pointer.");
+  throw std::runtime_error("Send or receive null pointer.");
   // The memory buffer with the message being sent and the memory buffer for the resulting message null pointer
 
   if (count == 0) throw std::runtime_error("Is empty.");
   // Message buffer is empty
 
   if (datatype != MPI_INT && datatype != MPI_FLOAT && datatype != MPI_DOUBLE)
-	throw std::runtime_error("Error");
+  throw std::runtime_error("Error");
   // Invalid data type
 
   if (op != MPI_SUM) throw std::runtime_error("Error");
