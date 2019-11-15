@@ -18,7 +18,7 @@ int Allreduce(void* sendbuf, void* recvbuf, int count, MPI_Datatype datatype,
   // Invalid data type
 
   if (op != MPI_SUM) throw std::runtime_error("Error");
-  // Некорректная операция
+  // Invalid operation
   if (op != MPI_SUM) throw std::runtime_error("Incorrect operation.");
 
   int rank, size;
