@@ -10,8 +10,8 @@ TEST(Vertical_Gauss, test_img_3_rows_3_cols) {
   int rank;
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-  int rows = 5;
-  int cols = 5;
+  int rows = 3;
+  int cols = 3;
 
   std::vector<unsigned int> src = Rand_Img(cols, rows);;
   std::vector<unsigned int> result_Parall;
